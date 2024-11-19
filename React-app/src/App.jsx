@@ -5,7 +5,8 @@ function Title() {
 }
 
 function App() {
-  return <h1>Hello World</h1>
+  return <Title />
 }
 
 export default App
+
