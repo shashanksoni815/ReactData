@@ -1,5 +1,5 @@
 import Product from "./Product"
-import
+import './Product.css';
 
 function ProductTab() {
     return (
