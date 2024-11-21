@@ -3,13 +3,11 @@ import './Product.css';
 
 function ProductTab() {
     return (
-        <div>
             <>
             <Product />
             <Product />
             <Product />
             </>
-        </div>
     )
 }
 
