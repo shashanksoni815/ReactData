@@ -7,6 +7,7 @@ function ProductTab() {
             <>
             <Product />
             <Product />
+            <Product />
             </>
         </div>
     )
