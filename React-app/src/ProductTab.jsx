@@ -1,7 +1,7 @@
 import Product from "./Product"
 import './Product.css';
 
-function ProductTab(Title) {
+function ProductTab(Title, Description) {
     return (
             <>
             <Product />
