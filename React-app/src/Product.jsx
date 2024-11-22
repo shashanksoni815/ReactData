@@ -7,7 +7,7 @@ function Product({title, idx}) {
     let description = ["8,000 DIP", "intutive surface", "Designed For iPad", "Wireless"];
     return (
         <div className="Product">
-            <h4>{title}</h4>
+            <h3>{title}</h3>
             <p>{description[idx] }</p>
             <Price oldPrice={oldPrices[idx]} newPrice={newPrices[idx]} />
         </div>
