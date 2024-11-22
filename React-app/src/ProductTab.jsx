@@ -1,13 +1,18 @@
 import Product from "./Product"
-import './Product.css';
+// import './Product.css';
 
 function ProductTab() {
+    let styles = {
+        display: "flex",
+        flexWrap: "wrap"
+    }
     return (
-            <>
-            <Product title="phone" price="25000" />
-            <Product title="laptop" price="50000" />
-            <Product title="pen" price="10" />
-            </>
+            <div style={styles} >
+            <Product title="Logitech MX Master" idx={0} />
+            <Product title="Apple Pencil (2nd Gen)" idx={1} />
+            <Product title="Zebronics Zeb-transformer" idx={2} />
+            <Product title="Asus Gaming Mouce" idx={3} />
+            </div>
     )
 }
 
