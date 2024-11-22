@@ -7,7 +7,7 @@ function ProductTab() {
         flexWrap: "wrap"
     }
     return (
-            <div style={styles} >
+            <div style={styles}>
             <Product title="Logitech MX Master" idx={0} />
             <Product title="Apple Pencil (2nd Gen)" idx={1} />
             <Product title="Zebronics Zeb-transformer" idx={2} />
