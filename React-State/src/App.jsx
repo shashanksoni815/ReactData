@@ -8,7 +8,6 @@ function App() {
     <>
       <h1>States in react</h1>
       <Counter />
-      <Counter />
     </>
   )
 }
