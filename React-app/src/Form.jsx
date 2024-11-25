@@ -1,4 +1,5 @@
-function haddleFormSubmit() {
+function haddleFormSubmit(event) {
+    event.preventDefault();
     console.log("form was submitted")
 }
 
