@@ -2,11 +2,12 @@ import './App.css';
 import ProductTab from "./ProductTab";
 // import MsgBox from './MsgBox';
 import Button from './Button';
+import Form from './form';
 
 function App() {
   return (
     <>
-      <Button />
+      <Form />
     </>
 
 
