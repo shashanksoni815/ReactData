@@ -1,5 +1,6 @@
 // import React from 'react';
-function handleFormSubmit() {
+function handleFormSubmit(event) {
+    event.preventDefault();
     console.log("Form was Submitted");
 };
 
