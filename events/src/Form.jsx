@@ -1,9 +1,15 @@
-import React from 'react';
+// import React from 'react';
+function handleFormSubmit() {
+    console.log("Form was Submitted");
+};
 
 function Form() {
     return ( 
         <>
-            <h1>Hello</h1>
+            <form>
+                <input type="text" />
+                <button onClick={handleFormSubmit}>Submit</button>
+            </form>
         </>
      );
 }
