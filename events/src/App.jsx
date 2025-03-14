@@ -1,15 +1,18 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 
 import './App.css'
-import Button from './Button'
-import Form from './Form'
+import Counter from './Counter'
+// import Button from './Button'
+// import Form from './Form'
 
 function App() {
 
   return (
     <>
-      <Button />
-      <Form />
+      {/* <Button />
+      <Form /> */}
+      <h1>States in react</h1>
+      <Counter />
     </>
   )
 }
