@@ -18,7 +18,7 @@ function Ludo() {
                 </div>
             </div>
         </>
-     );
+    );
 }
 
 export default Ludo;
