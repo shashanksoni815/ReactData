@@ -2,15 +2,16 @@
 import data from "../public/json/data.json"
 import './App.css'
 import Body from './Pixcel/Body';
-import Cart from "./Pixcel/Cart";
+import Nav from "./Pixcel/Nav";
+// import Cart from "./Pixcel/Cart";
 
 function App() {
    localStorage.setItem("data", JSON.stringify(data));
   return (
     <>
-      Data
-      <Body apidata={data} />
-      <Cart apiData={data} />
+      <Nav />
+      <Body />
+      {/* <Cart apiData={data} /> */}
     </>
   )
 }
