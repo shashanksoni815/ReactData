@@ -1,7 +1,15 @@
 function Nav() {
     return ( 
         <>
-            nav
+            <nav>
+                <ul>
+                    <li>
+                        <a className="head">Explore </a>
+                        <a className="head">Sign Up </a>
+                        <a className="head">Login </a>
+                    </li>
+                </ul>
+            </nav>
         </>
      );
 }
