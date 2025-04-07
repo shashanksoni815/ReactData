@@ -5,8 +5,8 @@ function Register() {
                 <main>
                     <div className="section-registeration">
                         <div className="container grid grid-two-cols">
-                            <div className="registeation-image">
-                                
+                            <div className="registration-image">
+                                <img src="" alt="" />
                             </div>
                         </div>
                     </div>
