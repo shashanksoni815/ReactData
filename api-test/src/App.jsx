@@ -1,6 +1,8 @@
 
 import data from "../public/json/data.json"
 import './App.css'
+import Home from "./goCart/Home";
+// import Product from "./goCart/Product";
 // import Body from './Pixcel/Body';
 // import Nav from "./Pixcel/Nav";
 
@@ -12,6 +14,9 @@ function App() {
       {/* <Nav />
       <Body /> */}
       {/* <Cart apiData={data} /> */}
+
+        <Home />
+
     </>
   )
 }
