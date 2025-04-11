@@ -1,16 +1,16 @@
-// import { useState } from 'react'
+
 import data from "../public/json/data.json"
 import './App.css'
-import Body from './Pixcel/Body';
-import Nav from "./Pixcel/Nav";
-// import Cart from "./Pixcel/Cart";
+// import Body from './Pixcel/Body';
+// import Nav from "./Pixcel/Nav";
+
 
 function App() {
    localStorage.setItem("data", JSON.stringify(data));
   return (
     <>
-      <Nav />
-      <Body />
+      {/* <Nav />
+      <Body /> */}
       {/* <Cart apiData={data} /> */}
     </>
   )
