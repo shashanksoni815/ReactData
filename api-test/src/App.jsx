@@ -1,22 +1,23 @@
-
-import data from "../public/json/data.json"
+import { BrowserRouter as Router, Routes, Route } from "react-router";
+// import data from "../public/json/data.json"
 import './App.css'
-import Home from "./goCart/Home";
+import Product from "./goCart/Product";
+import ShowCart from "./goCart/AddCart";
+// import Home from "./goCart/Home";
 // import Product from "./goCart/Product";
 // import Body from './Pixcel/Body';
 // import Nav from "./Pixcel/Nav";
 
 
 function App() {
-   localStorage.setItem("data", JSON.stringify(data));
   return (
     <>
-      {/* <Nav />
-      <Body /> */}
-      {/* <Cart apiData={data} /> */}
-
-        <Home />
-
+      <Router>
+        <Routes>
+          <Route path="/" element={<Product />} />
+          <Route path="/cart" element={<ShowCart />} />
+        </Routes>
+      </Router>
     </>
   )
 }

@@ -56,18 +56,20 @@
 .body-card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 
   text-align: center;
-  height: 200px;
+  height: 100vh;
+  width: 100vw;
+
 }
 
 .card-in {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   border-radius: 30px;
-  border: 2px solid rgb(40, 36, 36);
-  margin: 20px;
+  border: 2px solid black;
+  margin: 20px 0 ;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

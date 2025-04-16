@@ -1,30 +1,22 @@
-import { useContext } from "react";
-import CartContext from './Product'
+import { useEffect, useState } from "react";
 
 function ShowCart() {
-    const addCart = useContext(CartContext);
-    // const apiData = JSON.parse(localStorage.getItem("data"));
-    console.log(CartContext)
+    const [cartItem, setCartItem] = useState(null);
 
-    // const addToCart = () => {
-    //     console.log(apiData[2])
-    //     // setNum(num = api.id)
-    //     console.log(num)
-    // }
+    useEffect(() => {
+        const item = JSON.parse(localStorage.getItem('cartItem'));
+        setCartItem(item);
+      }, []);
+
+      if (!cartItem) return <p>No item in cart.</p>;
 
     return (
         <>
-            {/* <div className="body-card">
-                {
-                    apiData.map((api) => (
-                        <div key={api.id} className="card-in" >
-                            <h2>{api.name}</h2>
-                            <h3>{api.price}</h3>
-                            <button className="btn" id={api.id }  >  Add to cart</button>
-                        </div>
-                    ))
-                }
-            </div> */}
+        <div>
+            <h1>Cart</h1>
+            <h2>{cartItem.name}</h2>
+            <p>Price: ${cartItem.price}</p>
+        </div> 
         </>
     );
     
