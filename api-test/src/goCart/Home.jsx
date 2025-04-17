@@ -1,15 +1,14 @@
-import ShowCart from "./AddCart";
+// import ShowCart from "./AddCart";
 
-function Home() {
-    useEffect(() => {
-        localStorage.setItem("data", JSON.stringify(data));
-      }, []);
-    return ( 
-        <>
-            Home
-            <ShowCart />
-        </>
-     );
-}
+// function Home() {
+//     useEffect(() => {
+//         localStorage.setItem("data", JSON.stringify(data));
+//       }, []);
+//     return ( 
+//         <>
+            
+//         </>
+//      );
+// }
 
-export default Home;
+// export default Home;
