@@ -12,12 +12,20 @@ function Product() {
 
   const handleAddToCart = (item) => {
       let prevItem = JSON.parse(localStorage.getItem('cartItems')) || []
-
+      
+      const inCart = prevItem.some(cartItem => cartItem.id === item.id);
+      
+      if (inCart) {
+        alert("This item is already in the cart.");
+        return;
+      }
       let newItem = [ ...prevItem , item]
-
-      console.log(newItem)
-      // localStorage.setItem('cartItems', JSON.stringify(newItem))
-      // navigate('/cart');
+      console.log(newItem.id)
+     localStorage.setItem('cartItems', JSON.stringify(newItem))
+      navigate('/cart');
+      // <div>
+      //   {console.log(shop.id)}
+      //   </div>
   };
   
   return ( 

@@ -3,6 +3,8 @@ import Nav from "./Nav";
 
 function ShowCart() {
     const [cartItem, setCartItem] = useState(null); 
+    const [count, setCount] = useState(0);
+
     useEffect(() => {
         const item = JSON.parse(localStorage.getItem('cartItems')) ;
         setCartItem(item);
@@ -10,23 +12,26 @@ function ShowCart() {
       
     if (!cartItem) return <p>No item in cart.</p>;    
 
-    // const removeCart = ( idx) => {
-    //     let carts = JSON.parse(localStorage.getItem('cartItems')) || [];
-    //     carts = carts.filter(cart => cart.id !== idx)
-    //     localStorage.setItem('cartItems', JSON.stringify(carts))
-    // }
+    const removeCart = ( itemId ) => {
+        // let carts = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const delCart = cartItem.filter(cart => cart.id !== itemId)
+        setCartItem(delCart)
+        localStorage.setItem('cartItems', JSON.stringify(delCart))
+    }
 
     return (
         <>
         <Nav />
         <div id="card">
-            { cartItem.map((items, idx) => (
-                    <div key={idx} id="product" >
+            { cartItem.map(items => (
+                    <div key={items.id} id="product" >
+                        {/* {setCount = count+1  } */}
                         <img src={items.image} alt="im" id="pro-img" />
                         <h2>{items.name}</h2>
                         <h3>Price: {items.price}</h3>
                         <h3>Discounted Price: {items.discount}</h3>
-                        <button className="btn" onClick={() => removeCart(idx)}>Remove Cart</button>
+                        <button className="btn" onClick={() => removeCart(items.id)}>Remove Cart</button>
+                        {/* {console.log(count)} */}
                     </div>
                     
                 ))
