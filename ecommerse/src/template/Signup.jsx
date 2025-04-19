@@ -1,7 +1,11 @@
 function Signup() {
     return ( 
         <>
-            <h3>Signup</h3>
+            <div className="main">
+                <div className="signup">
+                    Signup
+                </div>
+            </div>
         </>
      );
 }
