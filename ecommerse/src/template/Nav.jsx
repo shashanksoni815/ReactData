@@ -12,16 +12,18 @@ function Nav() {
               <div class="collapse navbar-collapse d-flex justify-content-around " id="navbarNav">
               <ul class="navbar-nav">
                   <li class="nav-item">
-                  <a class="nav-link active fs-5 px-5"  href="#">Home</a>
+                  <a class="nav-link active fs-5 px-5"  aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                  <a class="nav-link  active fs-5 px-5" href="#">Product </a>
+                  <a class="nav-link  active fs-5 px-5"  aria-current="page" href="#">Product </a>
                   </li>
                   <li class="nav-item">
-                  <a class="nav-link  active fs-5 px-5" href="#">About</a>
+                  <a class="nav-link  active fs-5 px-5"  aria-current="page" href="#">About</a>
                   </li>
               </ul>
-              <ul class="navbar-nav  text-end">
+              <span  className="text-end">
+
+              <ul class="navbar-nav  ">
                   <li class="nav-item">
                   <a class="nav-link active fs-5 px-5"  href="#">Signup</a>
                   </li>
@@ -32,6 +34,7 @@ function Nav() {
                   <a class="nav-link  active fs-5 px-5" href="#">Cart</a>
                   </li>
               </ul>
+              </span>
             </div>
           </div>
           </nav>
