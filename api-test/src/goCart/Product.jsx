@@ -4,6 +4,7 @@ import Nav from "./Nav";
 
 function Product() {
   const [pro, setPro] = useState([]);
+  const [showLoginModal, setShowLoginModal] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
       const apiData = JSON.parse(localStorage.getItem("data"));
@@ -11,12 +12,17 @@ function Product() {
   }, [])
 
   const handleAddToCart = (item) => {
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+    if (!loggedInUser) {
+      setShowLoginModal(true); // Show modal if not logged in
+      return;
+    }
+
       let prevItem = JSON.parse(localStorage.getItem('cartItems')) || []
       
       const inCart = prevItem.some(cartItem => cartItem.id === item.id);
       
-      
-
       if (inCart) {
         alert("This item is already in the cart.");
         return;
@@ -45,6 +51,17 @@ function Product() {
             <button className="btn" onClick={() => handleAddToCart(product)}>Add to Cart</button>
           </div>
         ))}
+
+{showLoginModal && (
+        <div className="model-layer" >
+          <div className="model-display" >
+            <h1>You need to log in first</h1>
+            <button className="btn" onClick={() => navigate('/login')}>Go to Login</button>
+            <button className="btn" onClick={() => setShowLoginModal(false)}>Cancel</button>
+          </div>
+        </div>
+      )}
+
       </div>
     </>
   );

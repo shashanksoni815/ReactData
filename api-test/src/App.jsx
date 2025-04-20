@@ -2,12 +2,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router";
 import './App.css'
 import Product from "./goCart/Product";
 import ShowCart from "./goCart/AddCart";
-import Nav from "./goCart/Nav";
 import Home from "./goCart/Home";
 import Signup from "./goCart/Signup";
 import Login from "./goCart/Login";
 import Profile from "./goCart/Profile";
-
 
 function App() {
   return (
