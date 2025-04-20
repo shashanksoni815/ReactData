@@ -15,12 +15,14 @@ function Product() {
       
       const inCart = prevItem.some(cartItem => cartItem.id === item.id);
       
+      
+
       if (inCart) {
         alert("This item is already in the cart.");
         return;
       }
       let newItem = [ ...prevItem , item]
-      console.log(newItem.id)
+      //console.log(newItem.id)
      localStorage.setItem('cartItems', JSON.stringify(newItem))
       navigate('/cart');
       // <div>
@@ -36,10 +38,11 @@ function Product() {
         {pro.map(product => (
           <div key={product.id}  className="card.in" id="product" >
             <img src={product.image} alt="free pic" id="pro-img" />
-          <h2>{product.name}</h2>
-          <h3>Price: {product.price}  </h3>
-          <h3>Discounted Price: {product.discount} </h3>
-          <button className="btn" onClick={() => handleAddToCart(product)}>Add to Cart</button>
+            <h2>{product.name}</h2>
+            <h3>Price: Rs {product.price}  </h3>
+            <h3 className="discount" >5% off</h3>
+            <h3>Discounted Price: Rs {product.discount} </h3>
+            <button className="btn" onClick={() => handleAddToCart(product)}>Add to Cart</button>
           </div>
         ))}
       </div>

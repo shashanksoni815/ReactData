@@ -28,8 +28,9 @@ function ShowCart() {
                         {/* {setCount = count+1  } */}
                         <img src={items.image} alt="im" id="pro-img" />
                         <h2>{items.name}</h2>
-                        <h3>Price: {items.price}</h3>
-                        <h3>Discounted Price: {items.discount}</h3>
+                        <h3>Price: Rs {items.price}</h3>
+                        <h3 className="discount" >5% off</h3>
+                        <h3>Discounted Price: Rs {items.discount}</h3>
                         <button className="btn" onClick={() => removeCart(items.id)}>Remove Cart</button>
                         {/* {console.log(count)} */}
                     </div>
