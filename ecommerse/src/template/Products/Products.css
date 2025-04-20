@@ -1,0 +1,22 @@
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.product-view {
+    height: 400px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.product-view img {
+    height: 50%;
+    width: 90%;
+}

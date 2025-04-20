@@ -4,12 +4,14 @@ import slide3 from "../assets/slider/img3.png"
 import Footer from "./Footer";
 
 import Nav from "./Nav";
+import Products from "./Products/Products";
 
 function Home() {
     return ( 
         <>
             <Nav />
-            <div id="carouselExampleSlidesOnly"   class="carousel slide " data-bs-ride="carousel">
+            <Products />
+            {/* <div id="carouselExampleSlidesOnly"   class="carousel slide " data-bs-ride="carousel">
             <div class="carousel-inner" >
                 <div class="carousel-item active">
                 <img src={slide1} class="d-block w-100" alt="..." />
@@ -21,7 +23,7 @@ function Home() {
                 <img src={slide3} class="d-block w-100" alt="..." />
                 </div>
             </div>
-            </div>
+            </div> */}
             <Footer />
         </>
      );
