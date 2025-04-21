@@ -3,11 +3,19 @@ import Nav from "./Nav";
 
 function ShowCart() {
     const [cartItem, setCartItem] = useState(null); 
-    const [count, setCount] = useState(0);
+    const [total, setTotal] = useState(0);
+    const [discount, setDiscount] = useState(0);
 
     useEffect(() => {
         const item = JSON.parse(localStorage.getItem('cartItems')) ;
         setCartItem(item);
+
+        const totalPrice = item.reduce((a, b) => a + b.price, 0);
+        setTotal(totalPrice);
+
+        const disPrice = item.reduce((a, b) => a + b.discount, 0);
+        setDiscount(disPrice);
+
     }, []); 
       
     if (!cartItem) return <p>No item in cart.</p>;    
@@ -33,11 +41,16 @@ function ShowCart() {
                         <h3>Discounted Price: Rs {items.discount}</h3>
                         <button className="btn" onClick={() => removeCart(items.id)}>Remove Cart</button>
                         {/* {console.log(count)} */}
+
                     </div>
                     
                 ))
             }
         </div> 
+        <div>
+            <h1>Total Price : Rs {total}</h1>
+            <h1>Discounted Price : Rs {discount}</h1>
+        </div>
         </>
     );
     

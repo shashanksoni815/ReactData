@@ -52,7 +52,7 @@ function Product() {
           </div>
         ))}
 
-{showLoginModal && (
+        {showLoginModal && (
         <div className="model-layer" >
           <div className="model-display" >
             <h1>You need to log in first</h1>
