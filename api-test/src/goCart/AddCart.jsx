@@ -16,7 +16,7 @@ function ShowCart() {
 
         const disPrice = item.reduce((a, b) => a + b.discount, 0);
         setDiscount(disPrice);
-    }, []); 
+    }); 
       
     if (!cartItem) return <p>No item in cart.</p>;    
 

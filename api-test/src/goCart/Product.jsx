@@ -49,7 +49,7 @@ function Product() {
             <h3>Price: Rs {product.price}  </h3>
             <h3 className="discount" >5% off</h3>
             <h3>Discounted Price: Rs {product.discount} </h3>
-            <button className="btn" onClick={() => handleAddToCart(product)}>Add to Cart</button>
+            <button className="btn btn-primary" onClick={() => handleAddToCart(product)}>Add to Cart</button>
           </div>
         ))}
 
@@ -57,8 +57,8 @@ function Product() {
         <div className="model-layer" >
           <div className="model-display" >
             <h1>Do you want to continue please login first!!</h1>
-            <button className="btn" onClick={() => navigate('/login')}>Go to Login</button>
-            <button className="btn" onClick={() => setShowLoginModal(false)}>Cancel</button>
+            <button className="btn btn-primary" onClick={() => navigate('/login')}>Go to Login</button>
+            <button className="btn btn-primary" onClick={() => setShowLoginModal(false)}>Cancel</button>
           </div>
         </div>
       )}

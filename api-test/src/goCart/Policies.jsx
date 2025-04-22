@@ -9,7 +9,7 @@ function Policies() {
             <div className="row policies">
                 <div className="col polici-col">
                     <div className="polici-Icon"><FaShippingFast /></div>
-                    <div className="policies-text">
+                    <div className="policies-text p-3 ">
                         <h3>Fast Shipping</h3>
                         <h6>Fast Shipping at your
                         door step.</h6>
@@ -17,7 +17,7 @@ function Policies() {
                 </div>
                 <div className="col polici-col">
                     <div className="polici-Icon"><GiReturnArrow /></div>
-                    <div className="policies-text">
+                    <div className="policies-text p-3 ">
                         <h3>Free Returns</h3>
                         <h6>Free return if products
                         are damaged.</h6>
@@ -25,7 +25,7 @@ function Policies() {
                 </div>
                 <div className="col polici-col">
                     <div className="polici-Icon"><BiSupport /></div>
-                    <div className="policies-text">
+                    <div className="policies-text p-3 ">
                         <h3>Support 24/7</h3>
                         <h6>24/7 and 365 days
                         support is available.</h6>
@@ -34,7 +34,7 @@ function Policies() {
                 <div className="col polici-col">
                     <div className="polici-Icon"><FaArrowRightLong />
                     </div>
-                    <div className="policies-text">
+                    <div className="policies-text p-3 ">
                         <h3>Seller Login</h3>
                     </div>
                 </div>

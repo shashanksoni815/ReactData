@@ -8,22 +8,10 @@ function Nav() {
     useEffect(() => {
         const item = JSON.parse(localStorage.getItem('cartItems'));
         setCount( item.length)
-    }, [])
+    },)
 
     return ( 
         <>
-            {/* <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid upper-nav">
-                <img class="navbar-brand " src={logo} alt="src"/>
-                <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-                <div class="navbar-text mx-5">
-                    <button className="btn btn-info" >Login</button>
-                </div>
-            </div>
-            </nav> */}
 
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid upper-nav ">
@@ -58,18 +46,6 @@ function Nav() {
                     </div>
                 </div>
                 </nav>
-            
-            
-            
-            {/* <div className="nav">
-                {/* <h3>Home</h3> 
-                <h3><Link to="/" >Home</Link></h3>
-                <h3> <Link to='/product' > Products </Link> </h3>
-                <h3> <Link to='/cart' >Cart {count}</Link>   </h3>
-                <h3> <Link to='/signup' >Sign up </Link>   </h3>
-                <h3> <Link to='/login' >Login</Link>   </h3>
-                <h3> <Link to='/profile' >Profile</Link>   </h3>
-            </div> */}
         </>
     );
 }
