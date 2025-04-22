@@ -8,6 +8,7 @@ import Policies from "./Policies";
 function Footer() {
     return ( 
         <>
+            <footer style={{position:"sticky"}} >
             <Policies />
             <div className=" row footer">
                 <div className="col foot">
@@ -40,6 +41,7 @@ function Footer() {
                     
                 </div>
             </div>
+            </footer>
         </>
      );
 }

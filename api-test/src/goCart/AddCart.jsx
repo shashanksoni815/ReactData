@@ -16,7 +16,8 @@ function ShowCart() {
 
         const disPrice = item.reduce((a, b) => a + b.discount, 0);
         setDiscount(disPrice);
-    }); 
+        
+    }, [] ); 
       
     if (!cartItem) return <p>No item in cart.</p>;    
 
@@ -25,6 +26,15 @@ function ShowCart() {
         const delCart = cartItem.filter(cart => cart.id !== itemId)
         setCartItem(delCart)
         localStorage.setItem('cartItems', JSON.stringify(delCart))
+
+        const item = JSON.parse(localStorage.getItem('cartItems')) ;
+        setCartItem(item);
+
+        const totalPrice = item.reduce((a, b) => a + b.price, 0);
+        setTotal(totalPrice);
+
+        const disPrice = item.reduce((a, b) => a + b.discount, 0);
+        setDiscount(disPrice);
     }
 
     return (

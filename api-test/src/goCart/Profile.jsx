@@ -11,7 +11,7 @@ function Profile() {
             <div className="main" style={{flexDirection:"column"}} >
                 <h1>Welcome, {user.username}</h1> <br /> <br />
                 <h1>Your email is {user.email}</h1> <br /> <br />
-                <button className="btn" onClick={() => {
+                <button className="btn btn-info" onClick={() => {
                     localStorage.removeItem('loggedInUser') 
                     window.location.href = '/login' 
                 }}> Logout </button>

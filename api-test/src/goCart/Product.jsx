@@ -45,10 +45,10 @@ function Product() {
         {pro.map(product => (
           <div key={product.id}  className="card.in" id="product" >
             <img src={product.image} alt="free pic" id="pro-img" />
-            <h2>{product.name}</h2>
-            <h3>Price: Rs {product.price}  </h3>
-            <h3 className="discount" >5% off</h3>
-            <h3>Discounted Price: Rs {product.discount} </h3>
+            <h3>{product.name}</h3>
+            <h5>Price: Rs {product.price}  </h5>
+            <h6 className="discount" >5% off</h6>
+            <h5>Discounted Price: Rs {product.discount} </h5>
             <button className="btn btn-primary" onClick={() => handleAddToCart(product)}>Add to Cart</button>
           </div>
         ))}

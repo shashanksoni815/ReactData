@@ -8,7 +8,7 @@ function Nav() {
     useEffect(() => {
         const item = JSON.parse(localStorage.getItem('cartItems'));
         setCount( item.length)
-    },)
+    }, )
 
     return ( 
         <>
