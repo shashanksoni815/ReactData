@@ -21,7 +21,6 @@ function Product() {
     }
 
       let prevItem = JSON.parse(localStorage.getItem('cartItems')) || []
-      
       const inCart = prevItem.some(cartItem => cartItem.id === item.id);
       
       if (inCart) {
@@ -62,7 +61,6 @@ function Product() {
           </div>
         </div>
       )}
-
       </div>
       <Footer />
     </>

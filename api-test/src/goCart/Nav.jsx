@@ -36,8 +36,7 @@ function Nav() {
                         </li>
                         <li class="nav-item mx-4 fs-5"  >
                         <Link class="nav-link active" to="/profile" >Profile </Link>
-                        </li>
-                        
+                        </li>  
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
