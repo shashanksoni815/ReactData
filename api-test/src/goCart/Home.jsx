@@ -3,6 +3,13 @@
 import datas from "../assets/data.json"
 // import Product from "./Product";
 import { useEffect } from "react";
+import Nav from "./Nav";
+import hero from "../assets/images/image.png"
+import hero2 from "../assets/images/img2.png"
+import hero3 from "../assets/images/hero3.png"
+import Acc from "./Acc";
+import Suggetion from "./Suggetion";
+import Footer from "./Footer";
 
 
 
@@ -20,7 +27,13 @@ function Home() {
 
     return ( 
         <>
-           home
+          <Nav />
+           <div className="hero">
+            <img  src={hero3} alt="hero" />
+           </div>
+          <Acc />
+          {/* <Suggetion /> */}
+          <Footer />
         </>
      );
 }

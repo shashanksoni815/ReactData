@@ -1,6 +1,7 @@
 import Nav from "./Nav";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router";
+import Footer from "./Footer";
 
 function Login() {
 
@@ -36,13 +37,13 @@ function Login() {
                         <input type="text"  id="user" value={username} onChange={(e) => setUsername(e.target.value)} />
                         <label htmlFor="pass"> Password  </label>
                         <input type="text" id="pass" value={password} onChange={(e) => setPassword(e.target.value)} />
-                        
                         <p>Don't have an account? <Link to="/signup" >Signup</Link> </p>
                         <button type="submit" >Login</button>
                     </form>
                     
                 </div>
             </div>
+            <Footer />
         </>
      );
 }

@@ -41,6 +41,16 @@
   color: #888;
 } */
 
+.upper-nav {
+  height: 60px;
+}
+
+.upper-nav img {
+  height: 100%;
+  width: 150px;
+  margin-left: 30px;
+}
+
 .nav {
   margin: 0;
   padding: 0;
@@ -53,6 +63,22 @@
   background: #d3d1d1;
 }
 
+.hero {
+  height: 650px;
+  width: 100vw;
+}
+
+.hero img {
+  height: 100%;
+  width: 100%;
+}
+
+.slider {
+  height: 200px;
+  width: 100vw;
+}
+
+
 h1 {
   text-align: center;
 }
@@ -60,7 +86,7 @@ h1 {
 #card {
   display: flex;
   flex-wrap: wrap;
-   height: 100vh;
+   height: 100%;
   width: 100vw; 
   /* background: #000; */
 }
@@ -186,4 +212,62 @@ h1 {
   flex-direction: column;
   align-items: center; 
   justify-content: space-around;
+}
+
+.policies {
+  height: 150px;
+  width: 100vw;
+  background-color: #d3d1d1;
+}
+
+.polici-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.polici-Icon {
+  font-size: 60px;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+.footer {
+  height: 300px;
+  width: 100vw;
+  background-color: #d3c6ec;
+}
+
+.foot {
+  /* border: 2px solid rgb(255, 248, 248); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.foot img {
+  height: 150px;
+  width: 280px;
+}
+
+.foot2 ul li {
+  list-style: none;
+  font-size: 20px;
+  padding: 8px;
+  font-weight: 600;
+}
+
+.connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.icon {
+  font-size: 30px;
 }

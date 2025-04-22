@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import Nav from "./Nav";
+import Footer from "./Footer";
 
 function Product() {
   const [pro, setPro] = useState([]);
@@ -15,7 +16,7 @@ function Product() {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
     if (!loggedInUser) {
-      setShowLoginModal(true); // Show modal if not logged in
+      setShowLoginModal(true)
       return;
     }
 
@@ -55,7 +56,7 @@ function Product() {
         {showLoginModal && (
         <div className="model-layer" >
           <div className="model-display" >
-            <h1>You need to log in first</h1>
+            <h1>Do you want to continue please login first!!</h1>
             <button className="btn" onClick={() => navigate('/login')}>Go to Login</button>
             <button className="btn" onClick={() => setShowLoginModal(false)}>Cancel</button>
           </div>
@@ -63,6 +64,7 @@ function Product() {
       )}
 
       </div>
+      <Footer />
     </>
   );
 }

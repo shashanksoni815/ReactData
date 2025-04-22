@@ -1,4 +1,5 @@
 // import ShowCart from "./AddCart";
+import Footer from "./Footer";
 import Nav from "./Nav";
 
 function Profile() {
@@ -6,7 +7,6 @@ function Profile() {
 
     return ( 
         <>
-
             <Nav />
             <div className="main" style={{flexDirection:"column"}} >
                 <h1>Welcome, {user.username}</h1> <br /> <br />
@@ -16,7 +16,7 @@ function Profile() {
                     window.location.href = '/login' 
                 }}> Logout </button>
             </div>
-            
+            <Footer />
         </>
      );
 }

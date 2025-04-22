@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Nav from "./Nav";
+import Footer from "./Footer";
 
 function ShowCart() {
     const [cartItem, setCartItem] = useState(null); 
@@ -15,7 +16,6 @@ function ShowCart() {
 
         const disPrice = item.reduce((a, b) => a + b.discount, 0);
         setDiscount(disPrice);
-
     }, []); 
       
     if (!cartItem) return <p>No item in cart.</p>;    
@@ -51,6 +51,7 @@ function ShowCart() {
             <h1>Total Price : Rs {total}</h1>
             <h1>Discounted Price : Rs {discount}</h1>
         </div>
+        <Footer />
         </>
     );
     

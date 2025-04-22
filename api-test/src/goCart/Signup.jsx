@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Nav from "./Nav";
 import { Link, useNavigate } from "react-router";
+import Footer from "./Footer";
 
 function Signup() {
     const [username, setUsername] = useState("")
@@ -16,7 +17,6 @@ function Signup() {
 
         const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
 
-    // Check if email already exists
         const userExists = existingUsers.find(user => user.username === username);
         if (userExists) {
         alert('user already registered!');
@@ -66,6 +66,7 @@ function Signup() {
                     </form>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }
