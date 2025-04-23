@@ -39,14 +39,15 @@ function Suggetion() {
             <div className="sugg-card"  >
         {pro.map(product => (
           <div key={product.id}  className="card.in"   >
-            <img src={product.image} alt="free pic" id="pro-img" />
-            <h4>{product.name}</h4>
+            <img src={product.image} alt="free pic" />
+            <h4 style={{display:"flow"}}>{product.name}</h4>
             {/* <h5>Price: Rs {product.price}  </h5> */}
             {/* <h6 className="discount" >5% off</h6> */}
             {/* <h5>Discounted Price: Rs {product.discount} </h5> */}
             <button className="btn btn-primary" onClick={() => handleAddToCart(product)}>Add to Cart</button>
           </div>
         ))}
+        {/* <span> Hello</span> */}
 
         {showLoginModal && (
         <div className="model-layer" >
