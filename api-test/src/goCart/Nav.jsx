@@ -13,34 +13,34 @@ function Nav() {
     return ( 
         <>
 
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid upper-nav ">
-                    <Link to="/"><img class="navbar-brand " src={logo} alt="src"/></Link> 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+                <div className="container-fluid upper-nav ">
+                    <Link to="/"><img className="navbar-brand " src={logo} alt="src"/></Link> 
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mx-5 mb-lg-2">
-                        <li class="nav-item mx-4 fs-5"  >
-                        <Link class="nav-link active" to="/product" aria-current="page" >Products</Link>
+                    <div className="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul className="navbar-nav me-auto mb-2 mx-5 mb-lg-2">
+                        <li className="nav-item mx-4 fs-5"  >
+                        <Link className="nav-link active" to="/product" aria-current="page" >Products</Link>
                         </li>
-                        <li class="nav-item mx-4 fs-5"  >
-                        <Link class="nav-link active" to="/cart" >Cart {count} </Link>
+                        <li className="nav-item mx-4 fs-5"  >
+                        <Link className="nav-link active" to="/cart" >Cart {count} </Link>
                         </li>
-                        <li class="nav-item mx-4 fs-5"  >
-                        <Link class="nav-link active" to="/signup" > Signup</Link>
+                        <li className="nav-item mx-4 fs-5"  >
+                        <Link className="nav-link active" to="/signup" > Signup</Link>
                         </li>
-                        <li class="nav-item mx-4 fs-5"  >
-                        <Link class="nav-link active" to="/login" >Login</Link>
+                        <li className="nav-item mx-4 fs-5"  >
+                        <Link className="nav-link active" to="/login" >Login</Link>
                         </li>
-                        <li class="nav-item mx-4 fs-5"  >
-                        <Link class="nav-link active" to="/profile" >Profile </Link>
+                        <li className="nav-item mx-4 fs-5"  >
+                        <Link className="nav-link active" to="/profile" >Profile </Link>
                         </li>  
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    <form className="d-flex" role="search">
+                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button className="btn btn-outline-success" type="submit">Search</button>
                     </form>
                     </div>
                 </div>

@@ -1,51 +1,66 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 function Suggetion() {
     const [pro, setPro] = useState([]);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const navigate = useNavigate();
 
     useEffect(() => {
         const items = JSON.parse(localStorage.getItem("data"));
         setPro(items)
-    })
+    }, [])
+
+    const handleAddToCart = (item) => {
+        const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    
+        if (!loggedInUser) {
+          setShowLoginModal(true)
+          return;
+        }
+          let prevItem = JSON.parse(localStorage.getItem('cartItems')) || []
+          const inCart = prevItem.some(cartItem => cartItem.id === item.id);
+          
+          if (inCart) {
+            alert("This item is already in the cart.");
+            return;
+          }
+          let newItem = [ ...prevItem , item]
+          //console.log(newItem.id)
+         localStorage.setItem('cartItems', JSON.stringify(newItem))
+          navigate('/product');
+          // <div>
+          //   {console.log(shop.id)}
+          //   </div>
+      };
 
     return ( 
         <>
+            <div className="body-card" id="card" >
+        {pro.map(product => (
+          <div key={product.id}  className="card.in" id="product" style={{height:"300px"}} >
+            <img src={product.image} alt="free pic" id="pro-img" />
+            <h3>{product.name}</h3>
+            {/* <h5>Price: Rs {product.price}  </h5> */}
+            {/* <h6 className="discount" >5% off</h6> */}
+            {/* <h5>Discounted Price: Rs {product.discount} </h5> */}
+            <button className="btn btn-primary" onClick={() => handleAddToCart(product)}>Add to Cart</button>
+          </div>
+        ))}
 
+        {showLoginModal && (
+        <div className="model-layer" >
+          <div className="model-display" >
+            <h1>Do you want to continue please login first!!</h1>
+            <button className="btn btn-primary" onClick={() => navigate('/login')}>Go to Login</button>
+            <button className="btn btn-primary" onClick={() => setShowLoginModal(false)}>Cancel</button>
+          </div>
+        </div>
+      )}
+      </div>
             
-
-            {/* <div id="carouselExampleInterval" class="carousel slide slider" data-bs-ride="carousel">
-                <div class="carousel-inner ">
-
-                    {
-                        pro.map((product) => (
-                            <div key={product.id}>
-                                <div class="carousel-item active" data-bs-interval="10000">
-                                    <img src={product.image} class="d-block w-10" alt="..." />
-                                </div>
-                                <div class="carousel-item" data-bs-interval="2000">
-                                <img src="..." class="d-block w-10" alt="..." />
-                                </div>
-                                <div class="carousel-item">
-                                <img src="..." class="d-block w-10" alt="..." />
-                                </div>
-                            </div>
-                        ))
-                    }
-
-
-                    
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-                </div> */}
         </>
-     );
+    );
 }
 
 export default Suggetion;

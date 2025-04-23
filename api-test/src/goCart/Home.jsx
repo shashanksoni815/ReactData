@@ -32,7 +32,7 @@ function Home() {
             <img  src={hero3} alt="hero" />
            </div>
           <Acc />
-          {/* <Suggetion /> */}
+          <Suggetion />
           <Footer />
         </>
      );

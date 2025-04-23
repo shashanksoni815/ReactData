@@ -5,6 +5,7 @@
       "name": "Google Pixel 6 Pro",      
       "price": 80000 ,
       "discount": 76000  ,
+      "quantity": 1 ,
       "data": {
         "Screen size": 6.5,
         "capacity": "128 GB"
@@ -16,6 +17,7 @@
       "name": "Apple iPhone 12 Mini",      
       "price": 60000 ,
       "discount": 57000  ,
+      "quantity": 1 ,
       "data": {
         "Screen size": 4.9,
         "Capacity": "256 GB"
@@ -27,6 +29,7 @@
       "name": "Apple iPhone 12 Pro Max",      
       "price": 80000 ,
       "discount": 75000  ,
+      "quantity": 1 ,
       "data": {
         "Screen size": 6.5,
         "capacity": "512 GB"
@@ -38,6 +41,7 @@
       "name": "Apple iPhone 11",      
       "price": 80000 ,
       "discount": 75000  ,
+      "quantity": 1 ,
       "data": {
         "Screen size": 6.9,
         "Capacity": "256 GB"
@@ -49,6 +53,7 @@
       "name": "Samsung Galaxy Z Fold2",      
       "price": 80000 ,
       "discount": 75000  ,
+      "quantity": 1 ,
       "data": {
         "Screen size": 8.3,
         "Capacity": "128 GB"
@@ -60,6 +65,7 @@
       "name": "Apple AirPods",      
       "price": 80000 ,
       "discount": 75000  ,
+      "quantity": 1 ,
       "data": {
         "Screen size": 0.9,
         "Capacity": "2 device"
@@ -71,6 +77,7 @@
       "name": "Apple MacBook Pro 16",      
       "price": 80000 ,
       "discount": 75000  ,
+      "quantity": 1 ,
       "data": {
         "Screen size": 15.9,
         "Capacity": "1 TB"
@@ -82,6 +89,7 @@
       "name": "Apple Watch Series 8",      
       "price": 80000 ,
       "discount": 75000  ,
+      "quantity": 1 ,
       "data": {
         "Screen size": 2.9,
         "Capacity": "16 GB"
@@ -93,6 +101,7 @@
       "name": "Beats Studio3 Wireless",      
       "price": 8000 ,
       "discount": 7000 ,
+      "quantity": 1 ,
       "data": {
         "Screen size": 7.9,
         "Capacity": "64 GB"
@@ -104,6 +113,7 @@
       "name": "Apple iPad Mini 5th Gen",      
       "price": 80000 ,
       "discount": 75000  ,
+      "quantity": 1 ,
       "data": {
         "Capacity": "64 GB",
         "Screen size": 7.9
@@ -115,6 +125,7 @@
       "name": "Apple iPad Air",      
       "price": 80000 ,
       "discount": 75000  ,
+      "quantity": 1 ,
       "data": {
         "Screen size": 7.9,
         "Capacity": "64 GB"
@@ -126,6 +137,7 @@
       "name": "Apple iPad Air",      
       "price": 80000 ,
       "discount": 75000  ,
+      "quantity": 1 ,
       "data": {
         "Screen size": 7.9,
         "Capacity": "256 GB"
