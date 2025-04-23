@@ -86,10 +86,35 @@ h1 {
 .body-card {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   
    height: 100%;
   width: 100vw; 
   /* background: #000; */
+}
+
+.sugg-card{
+  /* height: 350px;
+  width: 100vw; */
+  /* display: flex;
+  justify-content: space-around;
+  align-items: center; */
+  overflow-x: auto;
+  white-space: nowrap;
+  
+}
+
+.sugg-card div {
+  height: 300px;
+  width: 230px;
+  margin: 10px 15px;
+  border-radius: 15px;
+  padding: 10px;
+  border: 2px solid black;
+  display: inline-block;
+  justify-items: center;
+  text-justify: initial;
+  text-align: center;
 }
 
 #product {
@@ -106,6 +131,7 @@ h1 {
   justify-content: space-between;
   position: relative;
 }
+
 
 .discount {
   position: absolute;

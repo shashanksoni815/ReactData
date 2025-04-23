@@ -36,11 +36,11 @@ function Suggetion() {
 
     return ( 
         <>
-            <div className="body-card" id="card" >
+            <div className="sugg-card"  >
         {pro.map(product => (
-          <div key={product.id}  className="card.in" id="product" style={{height:"300px"}} >
+          <div key={product.id}  className="card.in"   >
             <img src={product.image} alt="free pic" id="pro-img" />
-            <h3>{product.name}</h3>
+            <h4>{product.name}</h4>
             {/* <h5>Price: Rs {product.price}  </h5> */}
             {/* <h6 className="discount" >5% off</h6> */}
             {/* <h5>Discounted Price: Rs {product.discount} </h5> */}
