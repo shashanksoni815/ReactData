@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import "../Components/Questions.css"
 
-
-function Questions() {
+function Questions({uri}) {
 
     const [que, setQue] = useState(null)
     const [selectedOption, setSelectedOption] = useState('')
     const [correctAnswer, setCorrectAnswer] = useState(false);
+    const [inCorrectAnswer, setInCorrectAnswer] = useState(false);
 
 
     useEffect(() => {
-        fetch('https://aptitude-api.vercel.app/Age')
+        fetch(uri)
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -29,49 +30,50 @@ function Questions() {
         e.preventDefault();
         if (selectedOption == que.answer) {
             setCorrectAnswer(true);
-            // alert("Correct answer");
+            setInCorrectAnswer(false);
         } else {
-            alert("Wrong Answer")
+            setInCorrectAnswer(true);
+            setCorrectAnswer(false);
         }
     }
 
     return ( 
         <>
-            <div>
+            <div className='Question'>
                 <h3>{que.question}</h3>
-                {
-                    que.options.map((val , idx) => (
-                        <label key={idx}>
-                            <input type="radio"
-                            name="age"
-                            value={val}
-                            checked = { selectedOption == val }
-                            onChange={handleChange}
-                            />
-                            {val}
-                        </label>
-                    ))
-                }
-                <p>selected option : {selectedOption} </p> <br /><br />
+                {que.options.map((val , idx) => (
+                    <label key={idx} className='option'>
+                        <input type="radio"
+                        className='form-check-input radio'
+                        name="raid"
+                        value={val}
+                        checked = { selectedOption == val }
+                        onChange={handleChange}
+                        />
+                        <p>{val}</p>
+                    </label>
+                ))}
+                <p>selected option : {selectedOption} </p> 
+                <br /><br />
                 <button onClick={checkAnswer } > Submit </button>
-                {/* <h4>{que.options[0]}</h4>
-                <h4>{que.options[1]}</h4>
-                <h4>{que.options[2]}</h4>
-                <h4>{que.options[3]}</h4>
-                <h5>{que.answer}</h5>
-                <h5>{que.explanation}</h5> */}
-
-                { correctAnswer && (
-                    <div className='correctModel'>
-                    <div className='correct'>
-                         <h1>Answer is correct</h1>
-                         <h5>Correct answer : {que.answer}</h5>
-                        <h5>Explanation = {que.explanation}</h5>
-                         <button onClick={() => setCorrectAnswer(false)}> Ok </button>
-                    </div>
+                
+                { inCorrectAnswer && (
+                    <div >
+                        <h1>Wrong Answer</h1>
+                        <h5>Correct answer is: {que.answer}</h5>
+                        <h5>Explanation: {que.explanation}</h5>
+                        <button onClick={() => setInCorrectAnswer(false)}>Try Again</button>
                     </div>
                 )}
 
+                { correctAnswer && (
+                    <div >
+                        <h1>Answer is correct</h1>
+                        <h5>Correct answer : {que.answer}</h5>
+                        <h5>Explanation = {que.explanation}</h5>
+                        <button  onClick={() => setCorrectAnswer(false)}> Ok </button>
+                    </div>
+                )}
             </div>
         </>
     );

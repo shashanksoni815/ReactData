@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -59,4 +59,8 @@
   width: 200px;
   background-color: rgb(58, 62, 62);
 
-} */
+} */ 
+
+h1 {
+  text-align: center;
+}
