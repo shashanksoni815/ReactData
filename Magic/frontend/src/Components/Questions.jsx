@@ -3,8 +3,10 @@ import React, { useState, useEffect } from 'react';
 
 function Questions() {
 
-    const [que, setQue] = useState([])
-    const [selectedOption, setSelectedOption] = useState()
+    const [que, setQue] = useState(null)
+    const [selectedOption, setSelectedOption] = useState('')
+    const [correctAnswer, setCorrectAnswer] = useState(false);
+
 
     useEffect(() => {
         fetch('https://aptitude-api.vercel.app/Age')
@@ -15,79 +17,61 @@ function Questions() {
         })
     }, [])
 
+    if (!que) {
+        return <p>Loading ...</p>
+    }
+
     const handleChange = (e) => {
-        setSelectedOption(e.target.value);
-        
+        setSelectedOption(e.target.value)
+    }
+
+    const checkAnswer = (e) => {
+        e.preventDefault();
+        if (selectedOption == que.answer) {
+            setCorrectAnswer(true);
+            // alert("Correct answer");
+        } else {
+            alert("Wrong Answer")
+        }
     }
 
     return ( 
         <>
             <div>
-                <form >
-                    <h3>{que.question}</h3>
-
-                    <label>
-                        <input
-                            type="radio"
-                            value={que.options[0]}
-                            checked={selectedOption === que.options[0]}
-                            onChange={handleChange}
-                        />
-                        {que.options[0]}
-                    </label>
-
-                    <br />
-
-                    <label>
-                        <input
-                            type="radio"
-                            value={que.options[1]}
-                            checked={selectedOption === que.options[1]}
-                            onChange={handleChange}
-                        />
-                        {que.options[1]}
-                    </label>
-
-                    <br />
-
-                    <label>
-                        <input
-                            type="radio"
-                            value={que.options[2]}
-                            checked={selectedOption === que.options[2]}
-                            onChange={handleChange}
-                        />
-                        {que.options[2]}
-                    </label>
-
-                    <br />
-
-                    <label>
-                        <input
-                            type="radio"
-                            value={que.options[3]}
-                            checked={selectedOption === que.options[3]}
-                            onChange={handleChange}
-                        />
-                        {que.options[3]}
-                    </label>
-
-                    <p>Selected: {selectedOption}</p>
-        
-                </form>
-            </div>
-
-
-
-
-            <div>
                 <h3>{que.question}</h3>
-                <h4>{que.options[0]}</h4>
+                {
+                    que.options.map((val , idx) => (
+                        <label key={idx}>
+                            <input type="radio"
+                            name="age"
+                            value={val}
+                            checked = { selectedOption == val }
+                            onChange={handleChange}
+                            />
+                            {val}
+                        </label>
+                    ))
+                }
+                <p>selected option : {selectedOption} </p> <br /><br />
+                <button onClick={checkAnswer } > Submit </button>
+                {/* <h4>{que.options[0]}</h4>
                 <h4>{que.options[1]}</h4>
                 <h4>{que.options[2]}</h4>
                 <h4>{que.options[3]}</h4>
                 <h5>{que.answer}</h5>
-                <h5>{que.explanation}</h5>
+                <h5>{que.explanation}</h5> */}
+
+                { correctAnswer && (
+                    <div className='correctModel'>
+                    <div className='correct'>
+                         <h1>Answer is correct</h1>
+                         <h5>Correct answer : {que.answer}</h5>
+                        <h5>Explanation = {que.explanation}</h5>
+                         <button onClick={() => setCorrectAnswer(false)}> Ok </button>
+                    </div>
+                    </div>
+                )}
+
             </div>
         </>
     );

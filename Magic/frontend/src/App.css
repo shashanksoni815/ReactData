@@ -40,3 +40,23 @@
 .read-the-docs {
   color: #888;
 }
+
+/* .correctModel {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.correct {
+  border: 2px solid white;
+  height: 300px;
+  width: 200px;
+  background-color: rgb(58, 62, 62);
+
+} */
