@@ -1,6 +1,4 @@
 import React from 'react';
-// import { Router } from  ;
-// import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 function Home() {
     return ( 
