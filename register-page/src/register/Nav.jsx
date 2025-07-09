@@ -1,15 +1,11 @@
 function Nav() {
     return ( 
         <>
-            <nav>
-                <ul>
-                    <li>
-                        <a className="head">Explore </a>
-                        <a className="head">Sign Up </a>
-                        <a className="head">Login </a>
-                    </li>
-                </ul>
-            </nav>
+            <div style={{height:"60px" , width:"100vw", backgroundColor:"brown", display:"flex", justifyContent:"space-evenly" }}>
+                <h3>Home</h3>
+                <h3>Signup</h3>
+                <h3>Login</h3>
+            </div>
         </>
      );
 }
