@@ -1,0 +1,51 @@
+main{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(182, 209, 214);
+
+    section {
+        height: 100%;
+        width: 100%
+    }
+
+
+    .conversation-area {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+
+
+        .input-area {
+            width: 70%;
+            position: absolute;
+            background-color: rgb(162, 169, 248);
+            border: 2px solid black;
+            border-radius: 10px;
+            bottom: 2rem;
+
+            input {
+                width: 80%;
+                padding: 0.5em 0.7em;
+                outline: none;
+                border-radius: 10px;
+                background-color: transparent;
+                border: none;
+                color: black;
+            }
+            
+            button {
+                width: 20%;
+                padding: 0.5em 0.7em;
+                background-color: darkcyan;
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+
+            }
+        }
+    }
+}
