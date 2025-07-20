@@ -18,6 +18,29 @@ main{
         position: relative;
 
 
+        .messages {
+            height: 100%;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.1em;
+            padding-bottom: 4rem;
+            padding: 0.5em;
+
+            .message {
+                width: fit-content;
+                padding: 0.5em 1em;
+                background-color: rgb(70, 65, 65);
+                border-radius: 0.5rem;
+                color: aliceblue;
+                max-width: 75%;
+
+
+                &.user {
+                    align-self: flex-end;
+                }
+            }
+        }
 
         .input-area {
             width: 70%;
