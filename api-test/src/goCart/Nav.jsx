@@ -7,7 +7,7 @@ function Nav() {
     const [count, setCount] = useState(0);
     useEffect(() => {
         const item = JSON.parse(localStorage.getItem('cartItems'));
-        setCount( item.length)
+        setCount(item.length);
     }, )
 
     return ( 

@@ -55,7 +55,7 @@ function Product() {
         {showLoginModal && (
         <div className="model-layer" >
           <div className="model-display" >
-            <h1>Do you want to continue please login first!!</h1>
+            <h3>Do you want to continue please login first!!</h3>
             <button className="btn btn-primary" onClick={() => navigate('/login')}>Go to Login</button>
             <button className="btn btn-primary" onClick={() => setShowLoginModal(false)}>Cancel</button>
           </div>
