@@ -22,7 +22,7 @@ function WeatherApp() {
     return ( 
         <>
             <div style={{textAlign:"center"}}>
-                <h1>Weather App by Dhasu</h1>
+                <h1>Weather App by Shashank Soni</h1>
                 <SearchBox updateInfo={updateInfo} />
                 <InfoBox  info={weatherInfo} />
             </div>
