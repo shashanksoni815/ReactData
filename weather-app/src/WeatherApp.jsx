@@ -27,7 +27,7 @@ function WeatherApp() {
                 <InfoBox  info={weatherInfo} />
             </div>
         </>
-     );
+    );
 }
 
 export default WeatherApp;
