@@ -74,6 +74,9 @@ const Try = () => {
     }
 
     const handleData = () => {
+
+        // if()
+
         if (isEditing) {
             // If we're editing, update the existing item
             const prev = [...data];
@@ -162,7 +165,7 @@ const Try = () => {
                         <div 
                             key={idx} 
                             style={{
-                                backgroundColor: editIndex === idx ? '#ffffcc' : 'transparent',
+                                backgroundColor: editIndex === idx ? '#282828ff' : 'transparent',
                                 padding: '10px',
                                 marginBottom: '10px'
                             }}
