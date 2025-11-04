@@ -1,3 +1,4 @@
+import ApiCall from './apiCall'
 import './App.css'
 import Changes from './change'
 import Home from "./Home"
@@ -9,7 +10,8 @@ function App() {
     <>
     {/* <Home />
     <Changes /> */}
-    <Try />
+    {/* <Try /> */}
+    <ApiCall />
     </>
   )
 }
