@@ -12,7 +12,7 @@ function App() {
     <div className=" bg-lime-300">
       <NavBar />
       <Hero />
-      {/* <PayStrip /> */}
+      <PayStrip />
     </div>
     </>
   )
