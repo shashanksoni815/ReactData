@@ -3,6 +3,8 @@ import './App.css'
 import NavBar from './LandingPage/NavBar'
 import Hero from './LandingPage/Hero'
 import PayStrip from './LandingPage/PayStrip'
+import SaveCard from './LandingPage/SaveCard'
+import SaveTime from './LandingPage/SaveTime'
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
       <NavBar />
       <Hero />
       <PayStrip />
+
+      <SaveTime />
     </div>
     </>
   )

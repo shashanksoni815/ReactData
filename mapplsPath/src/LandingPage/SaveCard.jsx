@@ -1,17 +1,17 @@
 import React from 'react'
+import { MonitorDown } from 'lucide-react';
 
 const SaveCard = (props) => {
   return (
-    <div>
-        <div className="">
-            logo
+    <div className='m-3 p-3.5 h-70 w-60 border-2 border-black rounded-xl border-r-4 border-b-4 flex flex-col justify-evenly '>
+        <div className=" h-13 w-15 rounded-4xl border-2 border-black flex justify-center items-center">
+            {props.logo}
+        </div>
+        <div className=" text-3xl font-semibold">
+            {props.title}
         </div>
         <div className="">
-            WebDesign
-        </div>
-        <div className="">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id ab excepturi dolores illo repudiandae repellendus dolorum modi voluptas velit libero porro iure ducimus, nobis sed assumenda, laborum alias omnis in.
-            Iste incidunt eos quos sequi amet beatae quas perspiciatis vel velit, ducimus quaerat adipisci doloribus officiis laudantium quidem rem ea. Consectetur non ducimus sunt at repellendus neque possimus, qui soluta!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id ab excepturi dolores illo repudiandae repellendus 
         </div>
     </div>
   )
